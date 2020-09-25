@@ -51,8 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 
-$route['default_controller'] = 'fe/welcome';
+$route['default_controller'] = 'checker';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$this->set_directory("fe");
 
