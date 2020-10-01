@@ -19,13 +19,16 @@ class Checker extends CI_Controller
     public function index()
     {
         $this->load->view('checker');
+        // echo var_dump($token);
+        
     }
     public function check_key(){
+        $token = 'gAAAAABfdVGlcwXmw7GVrdDbYxZOPgtSjeKEa6yGdMupdFFGW5I2GmbewlPuh2-c1GEH9n4oVITR32vhsAL8s1gey0w_2UC0eYgTNEzLyx-zj0qz7teKvqg=';
         $key = $this->input->post('KEY');
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://activationtool.com/public-api/check-key?key=".$key."&token=gAAAAABfa_nCxyWDgoSMjeDHUfv6jVzdC2QVJSZz5tA3ZcbDOsSismNrqxj5KRY1sP_9LJGruEnBUJr-S2zUjDWJYcIXKGnNN743gMzG3IbskEMGC8kQzi4=",
+            CURLOPT_URL => "https://activationtool.com/public-api/check-key?key=".$key."&token=".$token."",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
