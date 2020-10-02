@@ -535,10 +535,11 @@
                 data: {
                     KEY: $("#textarea-key").val()
                 },
-                // beforeSend:function(){
-                // 	$("#loading").html("<img src='public/images/icon/loading.gif' />");
-                // },
+                beforeSend:function(){
+                    $("#loading").html("<img src='public/images/icon/loading.gif' />");
+                },
                 success: function (data) {
+                    $("#loading").html("");
                     // dataParsed = JSON.parse(data);
                     // console.log(dataParsed);
                     // $("#loading").html("");
